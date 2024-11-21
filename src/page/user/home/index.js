@@ -33,20 +33,16 @@ function Home() {
           <div className="banner__caption ">
             <div className="banner__content text-right">
               <h1 className={` ${currentSlide === 0 ? "animate-top" : ""}`}>
-              New Summer
-              
-              
+                New Summer
               </h1>
               <p
                 className={`colorW  ${
                   currentSlide === 0 ? "animate-bottom" : ""
                 }`}
               >
-                Off 30% 
+                Off 30%
               </p>
-              <div class="btn shopnow__button" >
-                    Shop Now
-                  </div>
+              <div class="btn shopnow__button">Shop Now</div>
             </div>
           </div>
         </div>
@@ -64,9 +60,7 @@ function Home() {
               >
                 Sale
               </p>
-              <div class="btn shopnow__button" >
-                    Shop Now
-                  </div>
+              <div class="btn shopnow__button">Shop Now</div>
             </div>
           </div>
         </div>
@@ -75,8 +69,7 @@ function Home() {
           <div className="banner__caption">
             <div className="banner__content margin-left-150">
               <h1 className={` ${currentSlide === 2 ? "animate-zoom" : ""}`}>
-                
-              Men Blazer 
+                Men Blazer
               </h1>
               <p
                 className={`colorW  ${
@@ -85,9 +78,7 @@ function Home() {
               >
                 New Now
               </p>
-              <div class="btn shopnow__button" >
-                    Shop Now
-                  </div>
+              <a class="btn shopnow__button">Shop Now</a>
             </div>
           </div>
         </div>
@@ -111,9 +102,7 @@ function Home() {
                       Don't Miss This Chance
                     </p>
                   </div>
-                  <div class="btn shopnow__button" >
-                    Shop Now
-                  </div>
+                  <a class="btn shopnow__button">Shop Now</a>
                 </div>
               </div>
             </Col>
@@ -132,9 +121,7 @@ function Home() {
                       Don't Miss This Chance
                     </p>
                   </div>
-                  <div class="btn shopnow__button">
-                    Shop Now
-                  </div>
+                  <a class="btn shopnow__button">Shop Now</a>
                 </div>
               </div>
             </Col>
@@ -143,9 +130,7 @@ function Home() {
       </section>
       <section className="product__area">
         <div className="container">
-          <h1 className="product__home__title">
-            New Arrival
-          </h1>
+          <h1 className="product__home__title">New Arrival</h1>
           <div className="product__tab">
             <ul className="product__tab__list">
               <li className="product__tab__item">All</li>
@@ -166,9 +151,7 @@ function Home() {
       </section>
       <section className="service__area">
         <div className="container">
-          <h1 className="service__title">
-            Our Service
-          </h1>
+          <h1 className="service__title">Our Service</h1>
           <ul className="service__list">
             <li className="service__item">
               <HiOutlineShoppingCart />
