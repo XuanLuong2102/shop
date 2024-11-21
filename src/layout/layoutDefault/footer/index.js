@@ -13,22 +13,22 @@ function Footer(){
           <p>Phone: 0961195409</p>
           <div class="social-icons">
             <a href="https://www.facebook.com/XuanLuong.it"><FaFacebookSquare /></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-            <a href="#"><i class="fa fa-rss"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <div ><i class="fa fa-twitter"></i></div>
+            <div><i class="fa fa-google-plus"></i></div>
+            <div><i class="fa fa-rss"></i></div>
+            <div><i class="fa fa-linkedin"></i></div>
           </div>
         </div>
         <div class="footer-column">
           <h3>USEFUL LINKS</h3>
           <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Car Listing</a></li>
-            <li><a href="#">Car Grid</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Car Details</a></li>
+            <li><p>About us</p></li>
+            <li><p>Service</p></li>
+            <li><p href="#">Car Listing</p></li>
+            <li><p href="#">Car Grid</p></li>
+            <li><p href="#">Contact Us</p></li>
+            <li><p href="#">Blog</p></li>
+            <li><p href="#">Car Details</p></li>
           </ul>
         </div>
         {/* <div class="footer-column">

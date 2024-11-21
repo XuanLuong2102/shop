@@ -1,6 +1,5 @@
 import "./style.scss";
 import { IoClose } from "react-icons/io5";
-import product1 from "../../../component/img/product1.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { useRef } from "react";
 import {
@@ -20,10 +19,6 @@ function MiniCartHeader() {
     ).toFixed(2);
     return sum + price * item.quantity;
   }, 0);
-
-  const handleDeleteAll = () => {
-    dispatch(deleteAllItem());
-  };
 
   const inputRef = useRef([]);
 
@@ -88,9 +83,9 @@ function MiniCartHeader() {
             <span class="ammount">{total.toFixed(2)}$</span>
           </div>
           <div class="mini-cart__buttons">
-            <a href="" class="btn btn-fullwidth btn-style-1">
+            <div class="btn btn-fullwidth btn-style-1">
               View Cart
-            </a>
+            </div>
           </div>
         </div>
       </div>

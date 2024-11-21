@@ -1,6 +1,4 @@
 import { Button, Checkbox } from "antd";
-import { useState } from "react";
-import { IoClose } from "react-icons/io5";
 import "./style.scss";
 
 function Login({ StateLogin, SetState }) {

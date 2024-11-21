@@ -151,9 +151,9 @@ function LayoutDefault() {
         className={`searchform__popup ${search ? "open" : ""}`}
         id="searchForm"
       >
-        <a href="#" class="btn-close" onClick={() => setSearch(false)}>
+        <div class="btn-close" onClick={() => setSearch(false)}>
           <IoClose />
-        </a>
+        </div>
         <div class="searchform__body">
           <p>Start typing and press Enter to search</p>
           <form class="searchform__form">
@@ -171,9 +171,9 @@ function LayoutDefault() {
         </div>
       </div>
       <div className={`login__area  ${windowLogin ? "open animate-top" : ""}`}>
-        <a href="#" class="btn-close" onClick={() => setWindowLogin(false)}>
+        <div class="btn-close" onClick={() => setWindowLogin(false)}>
           <IoClose />
-        </a>
+        </div>
         <Login StateLogin={stateLogin} SetState={setState} />
       </div>
       <aside class={`mini-cart ${cartMini ? "open" : ""}`} id="miniCart">

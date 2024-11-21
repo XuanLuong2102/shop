@@ -44,9 +44,9 @@ function Home() {
               >
                 Off 30% 
               </p>
-              <a class="btn shopnow__button" href="">
+              <div class="btn shopnow__button" >
                     Shop Now
-                  </a>
+                  </div>
             </div>
           </div>
         </div>
@@ -64,9 +64,9 @@ function Home() {
               >
                 Sale
               </p>
-              <a class="btn shopnow__button" href="">
+              <div class="btn shopnow__button" >
                     Shop Now
-                  </a>
+                  </div>
             </div>
           </div>
         </div>
@@ -85,9 +85,9 @@ function Home() {
               >
                 New Now
               </p>
-              <a class="btn shopnow__button" href="">
+              <div class="btn shopnow__button" >
                     Shop Now
-                  </a>
+                  </div>
             </div>
           </div>
         </div>
@@ -111,9 +111,9 @@ function Home() {
                       Don't Miss This Chance
                     </p>
                   </div>
-                  <a class="btn shopnow__button" href="">
+                  <div class="btn shopnow__button" >
                     Shop Now
-                  </a>
+                  </div>
                 </div>
               </div>
             </Col>
@@ -132,9 +132,9 @@ function Home() {
                       Don't Miss This Chance
                     </p>
                   </div>
-                  <a class="btn shopnow__button" href="">
+                  <div class="btn shopnow__button">
                     Shop Now
-                  </a>
+                  </div>
                 </div>
               </div>
             </Col>
