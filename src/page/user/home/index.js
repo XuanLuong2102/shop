@@ -42,7 +42,7 @@ function Home() {
               >
                 Off 30%
               </p>
-              <div class="btn shopnow__button">Shop Now</div>
+              <a class="btn shopnow__button">Shop Now</a>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ function Home() {
               >
                 Sale
               </p>
-              <div class="btn shopnow__button">Shop Now</div>
+              <a class="btn shopnow__button">Shop Now</a>
             </div>
           </div>
         </div>
@@ -121,7 +121,9 @@ function Home() {
                       Don't Miss This Chance
                     </p>
                   </div>
-                  <a class="btn shopnow__button">Shop Now</a>
+                  <a class="btn shopnow__button" s>
+                    Shop Now
+                  </a>
                 </div>
               </div>
             </Col>
