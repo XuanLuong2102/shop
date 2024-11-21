@@ -1,0 +1,58 @@
+.login {
+  &__popup {
+    width: 300px;
+    background: #fff;
+    margin: 50px auto;
+    border-radius: 5px;
+
+    & h1 {
+      padding-top: 10px;
+    }
+  }
+
+  &__form {
+    margin: 10px 20px;
+
+    &__input {
+      width: 100%;
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 5px 20px;
+      border-radius: 5px;
+      border: 1px solid #5f5e5e;
+    }
+
+    & .checkbox {
+      &__area {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-top: 10px;
+
+      }
+      &__item{
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+    &__submit{
+      padding: 5px 20px;
+      font-size: 18px;
+      margin-bottom: 10px;
+      background: rgb(39, 145, 231);
+      border: none;
+      border-radius: 5px;
+    }
+    & .login_sigup{
+      display: flex;
+      height: 30px;
+      font-size: 14px;
+      & span{
+        text-decoration: underline;
+        cursor: pointer;
+        
+      }
+
+    }
+  }
+}
