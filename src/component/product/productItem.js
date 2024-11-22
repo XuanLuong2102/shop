@@ -26,15 +26,14 @@ function ProductItem(props) {
     // Lấy vị trí hiện tại của ảnh sản phẩm và giỏ hàng
     const imgRect = img.getBoundingClientRect();
     const cartRect = header_cart.getBoundingClientRect();
-    console.log(cartRect);
   
     // Gắn giá trị vị trí vào CSS thông qua custom properties
     flying_img.style.setProperty("--left", `${(imgRect.left).toFixed(2)}px`);
     flying_img.style.setProperty("--top", `${(imgRect.top).toFixed(2)}px`);
     flying_img.style.setProperty("--height", `${(imgRect.height).toFixed(2)}px`);
     flying_img.style.setProperty("--width", `${(imgRect.width).toFixed(2)}px`);
-    flying_img.style.setProperty("--topcart", `${(cartRect.top).toFixed(2)}px`);
-    flying_img.style.setProperty("--leftcart", `${(cartRect.left).toFixed(2)}px`);
+    flying_img.style.setProperty("--topcart", `${(cartRect.top - (cartRect.height/2 + imgRect.height/2)).toFixed(2)}px`);
+    flying_img.style.setProperty("--leftcart", `${(cartRect.left + cartRect.width*2 -  imgRect.width/2).toFixed(2)}px`);
     
   
     // Hiệu ứng bay
