@@ -24,7 +24,7 @@ function ProductItem(props) {
     const imgRect = img.getBoundingClientRect();
   
     // Gắn giá trị vị trí vào CSS thông qua custom properties
-    flying_img.style.setProperty("--left", `${(imgRect.left - 500).toFixed(2)}px`);
+    flying_img.style.setProperty("--left", `${(imgRect.left - 520).toFixed(2)}px`);
     flying_img.style.setProperty("--top", `${(imgRect.top - 400 ).toFixed(2)}px`);
     
   
