@@ -11,10 +11,7 @@ function ProductItem(props) {
   const handleAddToCart = (e) => {
     let target_parent = e.target.closest(".product__item");
 
-    // Lấy vị trí giỏ hàng (SVG hoặc nút trong giỏ)
-    let header_cart = document.querySelector(".header_cart ");
     let img = target_parent.querySelector("img"); // Lấy ảnh sản phẩm
-    let svg = header_cart.querySelector("svg"); // Lấy ảnh sản phẩm
   
     // Tạo bản sao của ảnh
     let flying_img = img.cloneNode();
@@ -25,13 +22,10 @@ function ProductItem(props) {
   
     // Lấy vị trí hiện tại của ảnh sản phẩm và giỏ hàng
     const imgRect = img.getBoundingClientRect();
-    const cartRect = svg.getBoundingClientRect();
-    console.log(imgRect,cartRect);
-    console.log(svg);
   
     // Gắn giá trị vị trí vào CSS thông qua custom properties
-    flying_img.style.setProperty("--left", `${(imgRect.left - 480).toFixed(2)}px`);
-    flying_img.style.setProperty("--top", `${(imgRect.top - 350 ).toFixed(2)}px`);
+    flying_img.style.setProperty("--left", `${(imgRect.left - 500).toFixed(2)}px`);
+    flying_img.style.setProperty("--top", `${(imgRect.top - 400 ).toFixed(2)}px`);
     
   
     // Hiệu ứng bay
