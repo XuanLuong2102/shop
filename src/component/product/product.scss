@@ -8,6 +8,7 @@
     margin-right: 10px;
     margin-bottom: 50px;
     padding-bottom: 20px;
+    position: relative;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     & .rate{
         font-size: 12px;
@@ -76,5 +77,25 @@
   &__discount {
     font-weight: 700;
     color: orange;
+  }
+}
+.fly-to-cart {
+  position: fixed;
+  z-index: 9999;
+  border-radius: 50%;
+  animation: fly 1s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0% {
+    left: var(--left); /* Vị trí bắt đầu */
+    top: var(--top);
+    transform: scale(0.2);
+  }
+  100% {
+    left: 385px; /* Vị trí đích */
+    top: -430px;
+    transform: scale(0.02);
+
   }
 }

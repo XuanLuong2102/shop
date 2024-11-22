@@ -96,7 +96,7 @@ function LayoutDefault() {
                   </div>
                 </li>
                 <li
-                  className="account__header__item"
+                  className="account__header__item header_cart"
                   onClick={() => setCart(true)}
                 >
                   <IoBagHandleSharp />
