@@ -171,10 +171,8 @@ function LayoutDefault() {
         </div>
       </div>
       <div className={`login__area  ${windowLogin ? "open animate-top" : ""}`}>
-        <div class="btn-close" onClick={() => setWindowLogin(false)}>
-          <IoClose />
-        </div>
-        <Login StateLogin={stateLogin} SetState={setState} />
+        
+        <Login StateLogin={stateLogin} SetState={setState} SetWindow={setWindowLogin}/>
       </div>
       <aside class={`mini-cart ${cartMini ? "open" : ""}`} id="miniCart">
         <div class="mini-cart-wrapper">

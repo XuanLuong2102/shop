@@ -1,10 +1,14 @@
 import { Button, Checkbox } from "antd";
+import { IoClose } from "react-icons/io5";
 import "./style.scss";
 
-function Login({ StateLogin, SetState }) {
+function Login({ StateLogin, SetState, SetWindow }) {
   return (
     <>
       <div class="login__popup">
+        <div class="btn-close" onClick={() => SetWindow(false)}>
+          <IoClose />
+        </div>
         <h1>{StateLogin}</h1>
         <form class="login__form">
           <input
