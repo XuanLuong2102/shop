@@ -1,5 +1,6 @@
 import LayoutDefault from "../layout/layoutDefault";
 import Home from "../page/user/home";
+import ShopPage from "../page/user/shoppage";
 
 
 export const routes = [
@@ -12,8 +13,8 @@ export const routes = [
         element: <Home />
       },
       {
-        path:"/list",
-        element: <Home />
+        path:"/shoppage",
+        element: <ShopPage />
       },
     ]
   }

@@ -64,7 +64,7 @@ function LayoutDefault() {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/" className="menu__item">
+                  <NavLink to="/shoppage" className="menu__item">
                     SHOP
                   </NavLink>
                 </li>

@@ -1,0 +1,33 @@
+.shop__page {
+  & .banner {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 100px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+    &__content {
+      margin-left: 500px;
+      margin-top: 50px;
+    }
+    &__title {
+      color: #e7e7e7;
+      font-size: 45px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    & nav {
+      margin-left: 20px;
+    
+      & ol li,
+      a {
+        color: #252525;
+      }
+    }
+  }
+  & .panigation{
+    margin-bottom: 50px;
+  }
+}
