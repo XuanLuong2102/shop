@@ -11,7 +11,10 @@ function ProductItem(props) {
   const handleAddToCart = (e) => {
     let target_parent = e.target.closest(".product__item");
 
+    // Lấy vị trí giỏ hàng (SVG hoặc nút trong giỏ)
+    let header_cart = document.querySelector(".header_cart svg");
     let img = target_parent.querySelector("img"); // Lấy ảnh sản phẩm
+
   
     // Tạo bản sao của ảnh
     let flying_img = img.cloneNode();
@@ -22,10 +25,16 @@ function ProductItem(props) {
   
     // Lấy vị trí hiện tại của ảnh sản phẩm và giỏ hàng
     const imgRect = img.getBoundingClientRect();
+    const cartRect = header_cart.getBoundingClientRect();
+    console.log(cartRect);
   
     // Gắn giá trị vị trí vào CSS thông qua custom properties
-    flying_img.style.setProperty("--left", `${(imgRect.left - 520).toFixed(2)}px`);
-    flying_img.style.setProperty("--top", `${(imgRect.top - 400 ).toFixed(2)}px`);
+    flying_img.style.setProperty("--left", `${(imgRect.left).toFixed(2)}px`);
+    flying_img.style.setProperty("--top", `${(imgRect.top).toFixed(2)}px`);
+    flying_img.style.setProperty("--height", `${(imgRect.height).toFixed(2)}px`);
+    flying_img.style.setProperty("--width", `${(imgRect.width).toFixed(2)}px`);
+    flying_img.style.setProperty("--topcart", `${(cartRect.top).toFixed(2)}px`);
+    flying_img.style.setProperty("--leftcart", `${(cartRect.left).toFixed(2)}px`);
     
   
     // Hiệu ứng bay
