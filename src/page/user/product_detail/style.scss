@@ -23,12 +23,12 @@
         
     }
     & li button{
-        color: #3a3a3a;
-        background-color: #3a3a3a;
+        color: #3a3a3a !important;
+        background-color: #3a3a3a !important;
     }
     & li.slick-active button{
-        background-color: #3a3a3a;
-        color: #131313;
+        background-color: #3a3a3a !important;
+        color: #131313 !important;
     }
     & img {
       width: 100%;
@@ -42,6 +42,7 @@
     font-size: 24px;
     margin: 20px 0;
     letter-spacing: 1px;
+    margin-left: 10px;
   }
   &__stock {
     margin: 20px 0 20px 10px;
@@ -49,15 +50,17 @@
   }
   &__description {
     font-size: 16px;
+    margin-left: 10px;
   }
   &__content {
     color: #3a3a3a;
-    margin-top: 50px;
+    margin-top: 100px;
     width: 45%;
     display: flex;
     flex-direction: column;
     & .rate {
       font-size: 14px;
+      margin-left: 10px;
     }
     & .price {
       font-size: 22px;
@@ -65,6 +68,8 @@
     .tag{
         font-size: 14px;
         margin-top: 10px;
+        margin-left: 10px;
+        
     }
   }
   &__tags span:not(:last-child)::after{
@@ -136,6 +141,8 @@
             }
             &__content{
                 margin-top: 10px;
+                color: #3a3a3a;
+                font-size: 16px;
             }
         }
     }

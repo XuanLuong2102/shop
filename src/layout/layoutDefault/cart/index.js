@@ -7,6 +7,7 @@ import {
   deleteItem,
   updateQuantity,
 } from "../../../actions/cart";
+import { NavLink } from "react-router-dom";
 
 function MiniCartHeader() {
   const cart = useSelector((state) => state.cartReducer);
@@ -83,9 +84,9 @@ function MiniCartHeader() {
             <span class="ammount">{total.toFixed(2)}$</span>
           </div>
           <div class="mini-cart__buttons">
-            <div class="btn btn-fullwidth btn-style-1">
+            <NavLink class="btn btn-fullwidth btn-style-1" to="/view-cart">
               View Cart
-            </div>
+            </NavLink>
           </div>
         </div>
       </div>
