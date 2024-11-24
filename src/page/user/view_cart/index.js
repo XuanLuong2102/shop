@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartList from "./cartList";
-import { deleteAllItem } from "../../../component/actions/cart";
+import { deleteAllItem } from "../../../actions/cart";
 
 function ViewCart() {
   const cart = useSelector((state) => state.cartReducer);
