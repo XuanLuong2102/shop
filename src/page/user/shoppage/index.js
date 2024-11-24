@@ -3,8 +3,24 @@ import banner from "../../../component/img/banner.jpg";
 import { Pagination, Breadcrumb } from "antd";
 import { NavLink } from "react-router-dom";
 import Product from "../../../component/product";
+import { ChangeHeader } from "../../../layout/layoutDefault/changeHeader";
+import { useEffect, useState } from "react";
+import { getProductList } from "../../../Services/productService";
 
 function ShopPage() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const result = await getProductList();
+      setProducts(result.products); // Hiển thị toàn bộ sản phẩm
+    };
+
+    fetchProducts();
+  }, []);
+
+  ChangeHeader();
+
   return (
     <>
       <div className="shop__page">
@@ -22,11 +38,11 @@ function ShopPage() {
                 title: <NavLink to="/shoppage">Shop Page</NavLink>,
               },
             ]}
-          />
+          className="breadcrumb"/>
         </div>
         <div className="list">
           <div className="container">
-            <Product />
+            <Product  products={products}/>
           </div>
         </div>
         <Pagination align="center" defaultCurrent={1} total={50} className="panigation" />

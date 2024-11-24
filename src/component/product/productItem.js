@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart, updateQuantity } from "../../actions/cart";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { Rate } from "antd";
+import { NavLink } from "react-router-dom";
 
 function ProductItem(props) {
   const { item } = props;
@@ -56,17 +57,19 @@ function ProductItem(props) {
     <>
       <div className="product__item">
         <div>
-        <img className="product__image" src={item.thumbnail} />
+          <div className="product__image">
+          <img  src={item.thumbnail} />
+          <NavLink to={`product-detail/${item.id}`} className="product__view">View</NavLink>
+          </div>
+        
         <h3 className="product__title">{item.title}</h3>
         <div className="product__infor">
-          <div className="product__price">
-            <div className="product__price-new">
-              {((item.price * (100 - item.discountPercentage)) / 100).toFixed(
-                2
-              )}
+          <div className="price">
+            <div className="price-new">
+              {((item.price * (100 - item.discountPercentage)) / 100).toFixed(2)}
               $
             </div>
-            <div className="product__price-old ">{item.price}$</div>
+            <div className="price-old ">{item.price}$</div>
           </div>
           <button onClick={handleAddToCart}>
             {" "}
@@ -74,7 +77,7 @@ function ProductItem(props) {
           </button>
         </div>
         <div className="rate">
-          <Rate disabled allowHalf value={item.rating} /> {item.rating}
+          <Rate disabled allowHalf value={item.rating} /> ({item.rating.toFixed(1)})
         </div>
         </div>
       </div>

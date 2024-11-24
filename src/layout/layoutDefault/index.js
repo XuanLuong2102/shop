@@ -28,24 +28,6 @@ function LayoutDefault() {
     return sum + item.quantity;
   }, 0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const header = document.querySelector(".layout-default__header");
-      if (window.scrollY > 30) {
-        header.classList.add("shrink");
-        header.classList.remove("sticky");
-      } else {
-        header.classList.remove("shrink");
-        header.classList.add("sticky");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div className="layout-default">
       <header className="layout-default__header sticky">

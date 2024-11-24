@@ -5,6 +5,10 @@ export const getProductList = async () => {
     const result = await get("products");
     return result;
 };
+export const getProductbyID = async (id) => {
+    const result = await get(`products/${id}`);
+    return result;
+};
 export const createProductList = async (options) => {
     const result = await post("product",options);
     return result;

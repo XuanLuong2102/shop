@@ -302,6 +302,29 @@ input:focus {
   visibility: visible;
   opacity: 1;
 }
+.breadcrumb{
+  margin-left: 20px;
+  & ol li,
+  a {
+    color: #252525;
+  }
+}
+.price {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+  margin-left: 10px;
+  &-new {
+    font-weight: 500;
+    color: #3a3a3a;
+    margin-right: 10px;
+  }
+  &-old {
+    font-weight: 400;
+    color: #7c7c7c;
+    text-decoration: line-through;
+  }
+}
 @media (min-width: 1200px) {
   .container {
     max-width: 1200px;

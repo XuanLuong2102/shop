@@ -5,16 +5,28 @@ import banner3 from "../../../component/img/banner3.jpg";
 import sale__banner1 from "../../../component/img/section1-banner1.jpg";
 import sale__banner2 from "../../../component/img/section1-banner2.jpg";
 import "./style.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Product from "../../../component/product";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { BsCoin } from "react-icons/bs";
 import { MdSupportAgent } from "react-icons/md";
 import { SiSpringsecurity } from "react-icons/si";
+import { ChangeHeader } from "../../../layout/layoutDefault/changeHeader";
+import { getProductList } from "../../../Services/productService";
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const result = await getProductList();
+      setProducts(result.products.slice(0, 12)); // Lấy 12 sản phẩm đầu tiên
+    };
+    fetchProducts();
+  }, []);
+
+  ChangeHeader();
   const handleBeforeChange = (from, to) => {
     // Set the current slide to the one that will be active
     setCurrentSlide(to);
@@ -144,7 +156,7 @@ function Home() {
             </ul>
           </div>
           <div className="product__list">
-            <Product />
+            <Product products={products}/>
           </div>
           <div className="product__viewAll">
             <p>View All</p>
