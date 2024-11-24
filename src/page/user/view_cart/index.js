@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartList from "./cartList";
-import { deleteAllItem } from "../../../actions/cart";
 
 function ViewCart() {
   const cart = useSelector((state) => state.cartReducer);
@@ -13,23 +12,11 @@ function ViewCart() {
     ).toFixed(2);
     return sum + price * item.quantity;
   }, 0);
-
-  const handleDeleteAll = () => {
-    dispatch(deleteAllItem());
-  };
   return (
     <>
       <div className="cart">
         <div className="cart__title">
           <h2>Giỏ hàng </h2>
-          <div
-            className="cart--deleteAll"
-            onClick={() => {
-              handleDeleteAll();
-            }}
-          >
-            Xóa tất cả
-          </div>
         </div>
 
         <CartList />

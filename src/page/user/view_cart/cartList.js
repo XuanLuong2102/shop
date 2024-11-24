@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteAllItem, deleteItem, updateQuantity } from "../../actions/cart"
+import { deleteItem, updateQuantity } from "../../../actions/cart"
 import { useRef } from "react";
 
 function CartList() {
