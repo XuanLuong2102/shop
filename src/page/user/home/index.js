@@ -11,12 +11,16 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { BsCoin } from "react-icons/bs";
 import { MdSupportAgent } from "react-icons/md";
 import { SiSpringsecurity } from "react-icons/si";
-import { ChangeHeader } from "../../../layout/layoutDefault/changeHeader";
+import { ChangeHeader, HeaderSticky } from "../../../layout/layoutDefault/changeHeader";
 import { getProductList } from "../../../Services/productService";
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    HeaderSticky(); 
+  }, []);
 
   useEffect(() => {
     const fetchProducts = async () => {
