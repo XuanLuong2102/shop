@@ -1,28 +1,37 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartList from "./cartList";
+import "./style.scss"
+import {  HeaderShrink } from "../../../layout/layoutDefault/changeHeader";
+import banner from "../../../component/img/leaf.png"
+import { Breadcrumb } from "antd";
+import { NavLink } from "react-router-dom";
 
 function ViewCart() {
-  const cart = useSelector((state) => state.cartReducer);
-  const dispatch = useDispatch();
-
-  const total = cart.reduce((sum, item) => {
-    const price = (
-      (item.info.price * (100 - item.info.discountPercentage)) /
-      100
-    ).toFixed(2);
-    return sum + price * item.quantity;
-  }, 0);
+ 
+  HeaderShrink();
+ 
   return (
     <>
-      <div className="cart">
-        <div className="cart__title">
-          <h2>Giỏ hàng </h2>
+      <div className="view-cart">
+        <div className="view-cart__title">
+        <img src={banner} />
+          <h2 >Cart </h2>
+          <Breadcrumb
+          items={[
+            {
+              title: <NavLink to="/">Home</NavLink>,
+            },
+            {
+              title: <NavLink to="/view-cart">Cart</NavLink>,
+            },
+           
+          ]}
+          className="breadcrumb"
+        />
         </div>
 
         <CartList />
-        <div className="cart__total">
-          Tổng tiền: <span>{total.toFixed(2)}$</span>
-        </div>
+        
       </div>
     </>
   );
