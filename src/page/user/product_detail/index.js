@@ -45,6 +45,26 @@ function ProductDetail() {
     setQuantity(quantity+1)
   };
   const handleAddToCart = (e) => {
+    let target_parent = e.target.closest(".product-detail__main");
+    let header_cart = document.querySelector(".header_cart svg");
+    let img = target_parent.querySelector("img");
+    let flying_img = img.cloneNode();
+    flying_img.classList.add("fly-to-cart"); 
+    target_parent.appendChild(flying_img);
+    const imgRect = img.getBoundingClientRect();
+    const cartRect = header_cart.getBoundingClientRect();
+    flying_img.style.setProperty("--left", `${(imgRect.left).toFixed(2)}px`);
+    flying_img.style.setProperty("--top", `${(imgRect.top).toFixed(2)}px`);
+    flying_img.style.setProperty("--height", `${(imgRect.height).toFixed(2)}px`);
+    flying_img.style.setProperty("--width", `${(imgRect.width).toFixed(2)}px`);
+    flying_img.style.setProperty("--topcart", `${(cartRect.top - (cartRect.height/2 + imgRect.height/3)).toFixed(2)}px`);
+    flying_img.style.setProperty("--leftcart", `${(cartRect.left - cartRect.width*2 -  imgRect.width).toFixed(2)}px`);
+    
+  
+    // Hiệu ứng bay
+    setTimeout(() => {
+      flying_img.remove(); // Xóa ảnh sau khi hoàn thành hiệu ứng
+    }, 1000);
     if (cart.some((itemCart) => itemCart.id === id)) {
         setTimeout(() => {
           dispatch(updateQuantity(id, quantity));
@@ -54,8 +74,7 @@ function ProductDetail() {
           dispatch(addToCart(id, product));
           dispatch(updateQuantity(id, quantity - 1));
         }, 1100);
-      }
-  }
+      }};
   return (
     <>
       <div className="product-detail">

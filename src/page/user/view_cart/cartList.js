@@ -175,8 +175,9 @@ function CartList() {
                   xs={3}
                 >
                   {(
-                    (item.info.price * (100 - item.info.discountPercentage)) /
-                    100 * item.quantity
+                    ((item.info.price * (100 - item.info.discountPercentage)) /
+                      100) *
+                    item.quantity
                   ).toFixed(2)}
                   $
                 </Col>
@@ -200,8 +201,18 @@ function CartList() {
             xs={24}
           >
             <div className="view-cart__total">
-              Tổng tiền: <span>{total.toFixed(2)}$</span>
+                <p>Cart totals</p>
+                <div className="view-cart__total__item">
+                  Subtotal <span>{total.toFixed(2)} $</span>
+                </div >
+                <div className="view-cart__total__item">
+                  Shipping <span>Flat rate: 20.00 $</span>
+                </div>
             </div>
+            <div className="view-cart__total__item total">
+                  Total <span>{(total + 20).toFixed(2)} $</span>
+                </div>
+            <button className="checkout">Proceed To Checkout</button>
           </Col>
         </Row>
       </div>
