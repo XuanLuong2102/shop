@@ -1,7 +1,7 @@
 import "./style.scss";
 import banner from "../../../component/img/banner.jpg";
 import { Pagination, Breadcrumb } from "antd";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Product from "../../../component/product";
 import { ChangeHeader } from "../../../layout/layoutDefault/changeHeader";
 import { useEffect, useState } from "react";
@@ -32,10 +32,10 @@ function ShopPage() {
           <Breadcrumb
             items={[
               {
-                title: <NavLink to="/">Home</NavLink>,
+                title: <Link to="/">Home</Link>,
               },
               {
-                title: <NavLink to="/shoppage">Shop Page</NavLink>,
+                title: <Link to="/shoppage">Shop Page</Link>,
               },
             ]}
           className="breadcrumb"/>

@@ -13,6 +13,7 @@ import { MdSupportAgent } from "react-icons/md";
 import { SiSpringsecurity } from "react-icons/si";
 import { ChangeHeader, HeaderSticky } from "../../../layout/layoutDefault/changeHeader";
 import { getProductList } from "../../../Services/productService";
+import { Link, NavLink } from "react-router-dom";
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -162,9 +163,9 @@ function Home() {
           <div className="product__list">
             <Product products={products}/>
           </div>
-          <div className="product__viewAll">
+          <Link className="product__viewAll" to="/shoppage">
             <p>View All</p>
-          </div>
+          </Link>
         </div>
       </section>
       <section className="service__area">

@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart, updateQuantity } from "../../actions/cart";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { Rate } from "antd";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function ProductItem(props) {
   const { item } = props;
@@ -59,7 +59,7 @@ function ProductItem(props) {
         <div>
           <div className="product__image">
           <img  src={item.thumbnail} />
-          <NavLink to={`product-detail/${item.id}`} className="product__view">View</NavLink>
+          <Link to={`product-detail/${item.id}`} className="product__view">View</Link>
           </div>
         
         <h3 className="product__title">{item.title}</h3>
