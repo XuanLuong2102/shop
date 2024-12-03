@@ -1,7 +1,11 @@
 .text-center{
+  
   text-align: center;
 
 }
+.center{left: calc(50% - 15%);}
+.right{right: 10%;}
+.overflow{overflow: hidden;}
 .text-right{
   
   text-align: right;
@@ -38,8 +42,8 @@
   &__content {
     position: absolute;
     top: 30%;
-    right: 0;
-    left: 0;
+    width: 30%;
+    height: 100%;
     color: #fff;
     & h1{
       font-size: 40px;

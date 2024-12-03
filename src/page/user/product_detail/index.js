@@ -97,7 +97,9 @@ function ProductDetail() {
             <div className="product-detail__image">
               <Carousel arrows infinite={false}>
                 {product.images.map((image) => (
-                  <img src={image} />
+                  <img src={image} loading="lazy"/>
+                
+                  
                 ))}
               </Carousel>
             </div>

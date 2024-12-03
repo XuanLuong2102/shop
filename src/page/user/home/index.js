@@ -1,7 +1,7 @@
 import { Carousel, Col, Row } from "antd";
-import banner1 from "../../../component/img/banner1.jpg";
-import banner2 from "../../../component/img/banner2.jpg";
-import banner3 from "../../../component/img/banner3.jpg";
+import banner1 from "../../../component/img/banner1.webp";
+import banner2 from "../../../component/img/banner2.webp";
+import banner3 from "../../../component/img/banner3.webp";
 import sale__banner1 from "../../../component/img/section1-banner1.jpg";
 import sale__banner2 from "../../../component/img/section1-banner2.jpg";
 import "./style.scss";
@@ -13,7 +13,9 @@ import { MdSupportAgent } from "react-icons/md";
 import { SiSpringsecurity } from "react-icons/si";
 import { ChangeHeader, HeaderSticky } from "../../../layout/layoutDefault/changeHeader";
 import { getProductList } from "../../../Services/productService";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import 'animate.css';
+import { useAnimateOnScroll } from "../../../component/use_animate";
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,6 +38,12 @@ function Home() {
     // Set the current slide to the one that will be active
     setCurrentSlide(to);
   };
+  useAnimateOnScroll({classname:"sale__banner", addClass:"animate-bottom", Scroll : 70});
+  useAnimateOnScroll({classname:"product__home__title", addClass:"animate-left", Scroll : 500});
+  useAnimateOnScroll({classname:"product__tab", addClass:"animate-left", Scroll : 500});
+  useAnimateOnScroll({classname:"service__title", addClass:"animate-left", Scroll : 2000});
+  useAnimateOnScroll({classname:"service__list", addClass:"animate-right", Scroll : 2000});
+  
   return (
     <>
       <Carousel
@@ -48,7 +56,7 @@ function Home() {
         <div className="banner">
           <img src={banner1} alt="banner" />
           <div className="banner__caption ">
-            <div className="banner__content text-right">
+            <div className="banner__content text-center right">
               <h1 className={` ${currentSlide === 0 ? "animate-top" : ""}`}>
                 New Summer
               </h1>
@@ -66,8 +74,8 @@ function Home() {
         <div className="banner">
           <img src={banner2} alt="banner" />
           <div className="banner__caption">
-            <div className="banner__content text-center ">
-              <h1 className={` ${currentSlide === 1 ? "animate-left" : ""}`}>
+            <div className="banner__content text-center center">
+              <h1 className={` ${currentSlide === 1 ? "animate-zoom" : ""}`}>
                 Big Summer
               </h1>
               <p
@@ -84,8 +92,8 @@ function Home() {
         <div className="banner">
           <img src={banner3} alt="banner" />
           <div className="banner__caption">
-            <div className="banner__content margin-left-150">
-              <h1 className={` ${currentSlide === 2 ? "animate-zoom" : ""}`}>
+            <div className="banner__content margin-left-150 overflow">
+              <h1 className={` ${currentSlide === 2 ? "text-animate" : ""}`}>
                 Men Blazer
               </h1>
               <p

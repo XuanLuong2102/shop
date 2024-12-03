@@ -1,5 +1,5 @@
 import "./style.scss";
-import banner from "../../../component/img/banner.jpg";
+import banner from "../../../component/img/banner.webp";
 import { Pagination, Breadcrumb } from "antd";
 import { Link, NavLink } from "react-router-dom";
 import Product from "../../../component/product";
