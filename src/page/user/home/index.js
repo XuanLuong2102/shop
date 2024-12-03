@@ -21,9 +21,9 @@ function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
+  
     HeaderSticky(); 
-  }, []);
+ 
 
   useEffect(() => {
     const fetchProducts = async () => {

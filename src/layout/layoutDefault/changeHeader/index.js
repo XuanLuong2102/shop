@@ -22,20 +22,19 @@ export const ChangeHeader = () => {
 
 export const HeaderShrink = () => {
   const header = document.querySelector(".layout-default__header");
-  const sticky = document.querySelector(".sticky");
-  
-  if (!sticky) {
+
+  if (header) {
     header.classList.add("shrink");
     header.classList.remove("sticky");
+  } else {
   }
-  else{}
 };
 export const HeaderSticky = () => {
   const header = document.querySelector(".layout-default__header");
-  const sticky = document.querySelector(".shrink");
-  
-  if (!sticky) {
+
+  // Kiểm tra nếu header tồn tại trước khi thao tác với classList
+  if (header) {
     header.classList.add("sticky");
     header.classList.remove("shrink");
-  } else{}
+  }
 };

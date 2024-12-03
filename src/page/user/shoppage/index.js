@@ -3,7 +3,7 @@ import banner from "../../../component/img/banner.webp";
 import { Pagination, Breadcrumb } from "antd";
 import { Link, NavLink } from "react-router-dom";
 import Product from "../../../component/product";
-import { ChangeHeader } from "../../../layout/layoutDefault/changeHeader";
+import { ChangeHeader, HeaderSticky } from "../../../layout/layoutDefault/changeHeader";
 import { useEffect, useState } from "react";
 import { getProductList } from "../../../Services/productService";
 
@@ -18,7 +18,7 @@ function ShopPage() {
 
     fetchProducts();
   }, []);
-
+  HeaderSticky(); 
   ChangeHeader();
 
   return (
