@@ -52,13 +52,13 @@
 .text-animate {
   display: flex; /* Đảm bảo chỉ áp dụng animation cho nội dung */
   position: relative;    /* Định vị để animation hoạt động */
-  animation: slide-in 2s   ; /* Tạo hiệu ứng chạy vào */
+  animation: slide-in 3s   ; /* Tạo hiệu ứng chạy vào */
   
 }
 
 @keyframes slide-in {
   from {
-    transform: translateX(-150%); /* Xuất phát từ ngoài khung */
+    transform: translateX(-200%); /* Xuất phát từ ngoài khung */
   }
   to {
     transform: translateX(0); /* Dừng lại ở vị trí ban đầu */

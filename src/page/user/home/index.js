@@ -21,9 +21,6 @@ function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [products, setProducts] = useState([]);
 
-  
-    HeaderSticky(); 
- 
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -31,6 +28,7 @@ function Home() {
       setProducts(result.products.slice(0, 12)); // Lấy 12 sản phẩm đầu tiên
     };
     fetchProducts();
+    HeaderSticky(); 
   }, []);
 
   ChangeHeader();
