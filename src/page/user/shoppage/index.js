@@ -121,7 +121,7 @@ function ShopPage() {
                   <FaSearch />
                 </button>
               </form>
-              <Flex gap={8} wrap >
+              <Flex gap={10} wrap >
                 <span>Categories:</span>
                 {categorys.map((tag) => (
                   <Tag.CheckableTag
