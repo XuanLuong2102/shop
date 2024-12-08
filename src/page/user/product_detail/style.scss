@@ -15,8 +15,32 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  &__list__image{
+    display: flex;
+    width: 100px;
+    flex-direction: column;
+    img{
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      aspect-ratio: 1/1;
+      border: 1px solid #b3b2b2;
+      cursor: pointer;
+      &:active{
+        border: 3px solid rgb(253, 97, 58);
+      }
+      
+      &:not(:last-child){
+        margin-bottom: 10px;
+      }
+    }
+    .active{
+      border: 3px solid rgb(253, 97, 58);
+    }
+  }
   &__image {
-    width: 50%;
+    width: 40%;
+    border: #b3b2b2 1px solid;
     & .slick-arrow {
         font-size: 30px;
         color: rgb(15, 15, 15) !important;

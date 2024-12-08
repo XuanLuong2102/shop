@@ -21,7 +21,6 @@ function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [products, setProducts] = useState([]);
 
-
   useEffect(() => {
     const fetchProducts = async () => {
       const result = await getProductList();
