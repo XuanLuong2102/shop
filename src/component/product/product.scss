@@ -21,9 +21,12 @@
       justify-content: center;
       align-items: center;
     }
+    .content{
+      padding-left: 10px;
+    }
     & .rate {
       font-size: 12px;
-      margin-left: 10px;
+      
       & ul li {
         font-size: 16px;
       }
@@ -45,7 +48,7 @@
     font-size: 16px;
     color: #292929;
     font-weight: 500;
-    margin-left: 10px;
+    
     cursor: pointer;
   }
   &__image {
@@ -99,8 +102,10 @@
   & .price {
     &-new {
       font-size: 16px;
+      padding: 10px 0;
     }
     &-old {
+      padding: 10px 0;
       font-size: 14px;
     }
   }
