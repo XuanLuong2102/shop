@@ -23,6 +23,10 @@ function LayoutDefault() {
     setWindowLogin(true);
   };
 
+  const handlePageClick = () => {
+  
+  }
+
   const cart = useSelector((state) => state.cartReducer);
   const total = cart.reduce((sum, item) => {
     return sum + item.quantity;
@@ -41,27 +45,27 @@ function LayoutDefault() {
             <Col xl={10} lg={10} sm={0} xs={0} className="menu">
               <ul className="menu__list">
                 <li>
-                  <NavLink to="/" className="menu__item">
+                  <NavLink to="/" className="menu__item" onClick={handlePageClick()}>
                     HOME
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/shoppage" className="menu__item">
+                  <NavLink to="/shoppage" className="menu__item" onClick={handlePageClick()}>
                     SHOP
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/" className="menu__item">
+                  <NavLink to="/" className="menu__item" onClick={handlePageClick()}>
                     COLLECTIONS
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/" className="menu__item">
+                  <NavLink to="/" className="menu__item" onClick={handlePageClick()}>
                     ABOUT US
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/" className="menu__item">
+                  <NavLink to="/" className="menu__item" onClick={handlePageClick()}>
                     BLOG
                   </NavLink>
                 </li>

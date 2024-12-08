@@ -21,6 +21,40 @@
 
     
   }
+  &__top{
+    margin-bottom: 20px;
+    .select{
+      display: flex;
+      flex-direction: row-reverse;
+      padding-right: 30px;
+    }
+  }
+  &__main{
+    display: flex;
+    .sidebar{
+      width: 20%;
+      padding-right: 10px;
+      &__input{
+        font-size: 16px;
+        border-radius: 50px;
+        border: 1px solid #777777;
+        text-align: left;
+        padding-left: 15px;
+        width: 90%;
+        &::placeholder {
+          text-align: left;
+          font-size: 16px;
+        }
+      }
+      &__submit{
+        right: calc(10% + 10px );
+        font-size: 20px;
+      }
+    }
+    .list{
+      flex: 1;
+    }
+  }
   & .panigation{
     margin-bottom: 50px;
   }

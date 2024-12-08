@@ -1,8 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart, updateQuantity } from "../../actions/cart";
 import { HiOutlineShoppingCart } from "react-icons/hi";
+import { FaLongArrowAltDown } from "react-icons/fa";
 import { Rate } from "antd";
 import { Link, NavLink } from "react-router-dom";
+
 
 function ProductItem(props) {
   const { item } = props;
@@ -62,7 +64,7 @@ function ProductItem(props) {
           <Link to={`product-detail/${item.id}`} className="product__view">View</Link>
           </div>
         
-        <h3 className="product__title">{item.title}</h3>
+        <Link to={`product-detail/${item.id}`} className="product__title">{item.title}</Link>
         <div className="product__infor">
           <div className="price">
             <div className="price-new">
@@ -72,10 +74,11 @@ function ProductItem(props) {
             <div className="price-old ">{item.price}$</div>
           </div>
           <button onClick={handleAddToCart}>
-            {" "}
             <HiOutlineShoppingCart />
           </button>
         </div>
+        
+        <span className="discount"><FaLongArrowAltDown />{item.discountPercentage} %</span>
         <div className="rate">
           <Rate disabled allowHalf value={item.rating} /> ({item.rating.toFixed(1)})
         </div>
